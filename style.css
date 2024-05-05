@@ -1,0 +1,264 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    transition: background-color 0.5s, color 0.5s; 
+}
+
+.container {
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px; /* Add spacing below the fieldset */
+}
+
+legend {
+    font-size: 1.2em;  
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="number"],
+.input-group select {
+    width: 100%;  
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-group input[type="number"]:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #999;
+    box-shadow: 0 0 5px 2px rgba(255, 215, 0, 0.8); /* Golden glow */
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#convert-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+#convert-btn:hover {
+    background-color: #222;
+}
+
+
+/* Result and Error Messages */
+#result-box {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#error-msg {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Theme Switching - Dark Mode */
+
+body.dark-mode {
+    background-color: #222 !important;  /* Dark mode background color */
+    color: #eee !important;
+}
+
+body.dark-mode .container {
+    background-color: #333; /* Dark mode container background */
+    border-color: #444; /* Adjust border color for contrast */
+}
+
+body.dark-mode h1,
+body.dark-mode legend,
+body.dark-mode label {
+    color: #eee; /* Light text for dark background */
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; 
+    }
+
+    /* Adjust input widths on smaller screens */ 
+    .input-group input[type="number"],
+    .input-group select {
+        width: calc(50%  - 10px); /* Allow them to stack nicely */
+    }
+} 
+
+/* ... Existing CSS ... */
+
+/* Unit-Specific Backgrounds */
+#result-box.celsius {
+    background-color: #ADD8E6; /* Light blue */
+}
+
+#result-box.fahrenheit {
+    background-color: #FFA07A; /* Light orange */
+}
+
+#result-box.kelvin {
+    background-color: #E6E6FA; /* Light purple */
+}
+
+  /* Temperature Range Effects */
+  /* Add glow effects using CSS box-shadow  */
+#result-box.low {
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.8);  /* Adjust opacity as desired */
+}
+
+#result-box.high {
+    box-shadow: 0 0 10px rgba(255, 160, 122, 0.8); 
+}
+
+#result-box.moderate {
+    box-shadow: 0 0 10px rgba(230, 230, 250, 0.8); 
+}
+
+  /* Unit-Specific Backgrounds */
+#result-box.celsius {
+    background-color: #ADD8E6; /* Light blue */
+}
+
+#result-box.fahrenheit {
+    background-color: #FFA07A; /* Light orange */
+}
+
+#result-box.kelvin {
+    background-color: #E6E6FA; /* Light purple */
+}
+
+  /* Temperature Range Effects (Glow) */
+#result-box.low {
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.8);  
+}
+
+#result-box.high {
+    box-shadow: 0 0 10px rgba(255, 160, 122, 0.8); 
+}
+
+#result-box.moderate {
+    box-shadow: 0 0 10px rgba(230, 230, 250, 0.8); 
+}
+
+/* Light Theme (Default) */
+.light-theme {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #333;
+    color: #eee; /* Light text on dark background */
+}
+
+button {
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.2), 
+                inset -2px -2px 5px rgba(255, 255, 255, 0.5); 
+} 
+.container { 
+    background: linear-gradient(to bottom, rgba(181, 39, 119, 0.9), rgba(255, 255, 255, 0.7));
+}
+
+button:hover {
+    box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.3), 
+                inset -2px -2px 4px rgba(255, 255, 255, 0.7); 
+}
+
+body {
+    background-color: #e0f0ff; /* Example light shade of blue */
+    color: #333; /* Default dark text on light background */
+}
+
+.container {
+    background-color: #c0e0ff; /* Slightly darker shade for container */
+}
+
+fieldset {
+    background-color: #f0f8ff; /* Very light shade for fieldsets */
+}
+
+button {
+    /* Box shadow settings */
+    /* Gradient settings */
+    transition: all 0.2s ease-in-out; 
+    border-radius: 5px; 
+}
+
+/* Base styles - light theme defaults */
+body {
+    background-color: #f5f5f5; /* Light background color (optional) */
+    color: #333; /* Default text color (dark) */
+}
+
+.container,
+div,
+fieldset {
+    background-color: #fff; /* Light background color for these elements */
+}
+
+button {
+    background-color: #333; /* Default button color */
+    color: #fff; /* Default button text color (light) */
+}
+
+  /* Dark theme styles */
+body.dark-theme {
+    background-color: #4a1818; /* Dark background color */
+    color: #eee; /* Light text color for dark background */
+}
+
+body.dark-theme .container,
+body.dark-theme div,
+body.dark-theme fieldset {
+    background-color: #601947; /* Darker shade of grey for containers */
+}
+
+body.dark-theme button {
+    background-color: #a11717; /* Dark grey for buttons */
+    /* Inherit light text color from body.dark-mode */
+}
+
+  /* Additional styling for borders, shadows, etc. (optional) */
+body.dark-theme button {
+    border: 1px solid #924646; /* Adjust border color for better contrast */
+    /* Add subtle box-shadow for buttons (optional) */
+}
